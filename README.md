@@ -1,6 +1,6 @@
 # Portfolio Application
 
->This is Ruby On Rails 5 application.
+>This is Ruby On Rails 5 Portfolio application.
 
 ### Features
 
