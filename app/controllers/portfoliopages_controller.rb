@@ -19,4 +19,19 @@ class PortfoliopagesController < ApplicationController
     end
   end
 
+  def edit
+    @portfolio_item = Portfoliopage.find(params[:id])#hvata id portfolia
+  end
+
+ def update
+    @portfolio_item = Portfoliopage.find(params[:id])
+    respond_to do |format|
+      if @portfolio_item.update(params.require(:portfoliopage).permit(:title, :subtitle, :body))
+        format.html { redirect_to portfoliopages_path, notice: 'The record successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
 end
