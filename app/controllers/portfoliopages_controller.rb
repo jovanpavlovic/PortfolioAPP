@@ -38,4 +38,13 @@ class PortfoliopagesController < ApplicationController
   def show
     @portfolio_item = Portfoliopage.find (params[:id])#show za odredjeni portfolio
   end
+                
+   def destroy#ne treba poseban fajl zato sto radi destory
+    @portfolio_item = Portfoliopage.find(params[:id])#lookup
+
+    @portfolio_item.destroy#destroy/delete
+    respond_to do |format|
+      format.html { redirect_to portfoliopages_url, notice: 'Record was successfully removed.' }
+    end
+  end
 end
