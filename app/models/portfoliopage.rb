@@ -1,0 +1,2 @@
+class Portfoliopage < ApplicationRecord
+end
