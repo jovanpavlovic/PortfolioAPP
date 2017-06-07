@@ -25,6 +25,7 @@ class PortfoliopagesController < ApplicationController
 
  def update
     @portfolio_item = Portfoliopage.find(params[:id])
+
     respond_to do |format|
       if @portfolio_item.update(params.require(:portfoliopage).permit(:title, :subtitle, :body))
         format.html { redirect_to portfoliopages_path, notice: 'The record successfully updated.' }
@@ -34,4 +35,7 @@ class PortfoliopagesController < ApplicationController
     end
   end
 
+  def show
+    @portfolio_item = Portfoliopage.find (params[:id])#show za odredjeni portfolio
+  end
 end
