@@ -4,4 +4,6 @@ class Blog < ApplicationRecord
   friendly_id :title, use: :slugged #generise blog title link
 
   validates_presence_of :title, :body#ne dozvoljava da se napravi blog ako nema title i body
+
+  belongs_to :topic #vise blogova pripada jednoj topic
 end
