@@ -1,6 +1,11 @@
 class PortfoliopagesController < ApplicationController
   def index
     @portfolio_items = Portfoliopage.all
+    #where(subtitle: 'Ruby on Rails')
+  end
+
+  def angular
+    @angular_portfolio_items = Portfoliopage.angular  
   end
 
   def new
