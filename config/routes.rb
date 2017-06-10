@@ -1,5 +1,6 @@
  Rails.application.routes.draw do
   resources :portfoliopages, except: [:show]
+  get 'angular-items', to: 'portfoliopages#angular'
   get'portfoliopage/:id',  to: 'portfoliopages#show', as: 'portfoliopage_show'#custom routs metoda
 
   get 'about-me', to: 'pages#about'

@@ -1,14 +1,20 @@
 class PortfoliopagesController < ApplicationController
   def index
     @portfolio_items = Portfoliopage.all
+    #where(subtitle: 'Ruby on Rails')
+  end
+
+  def angular
+    @angular_portfolio_items = Portfoliopage.angular  
   end
 
   def new
     @portfolio_item = Portfoliopage.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
-    @portfolio_item = Portfoliopage.new(params.require(:portfoliopage).permit(:title, :subtitle, :body))
+    @portfolio_item = Portfoliopage.new(params.require(:portfoliopage).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
 
     respond_to do |format|
       if @portfolio_item.save
