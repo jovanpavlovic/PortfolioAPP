@@ -1,4 +1,5 @@
  Rails.application.routes.draw do
+  devise_for :users
   resources :portfoliopages, except: [:show]
   get 'angular-items', to: 'portfoliopages#angular'
   get'portfoliopage/:id',  to: 'portfoliopages#show', as: 'portfoliopage_show'#custom routs metoda
