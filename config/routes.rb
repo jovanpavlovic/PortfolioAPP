@@ -1,4 +1,5 @@
  Rails.application.routes.draw do
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}#menjaje putanje http://localhost:3000/users/sign_up
   resources :portfoliopages, except: [:show]
   get 'angular-items', to: 'portfoliopages#angular'
   get'portfoliopage/:id',  to: 'portfoliopages#show', as: 'portfoliopage_show'#custom routs metoda
