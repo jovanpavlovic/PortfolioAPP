@@ -7,13 +7,10 @@ class User < ApplicationRecord
   validates_presence_of :name
 
   def first_name
-    puts self.name#self.name - ime user-a, split uzima string i deli ime u 2 dela first ime, last prezime Hi, John!
+    self.name.split.first#self.name - ime user-a, split uzima string i deli ime u 2 dela first ime, last prezime Hi, John!
   end
 
   def last_name
-    puts self.name
+     self.name.split.last
   end
-end
-
-
-
+end 
