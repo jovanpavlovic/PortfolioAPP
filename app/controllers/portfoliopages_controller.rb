@@ -26,7 +26,7 @@ class PortfoliopagesController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Portfoliopage.find(params[:id])#hvata id portfolia
+    @portfolio_item = Portfoliopage.find(params[:id])#hvata id portfolia//portfolio/4
   end
 
  def update
