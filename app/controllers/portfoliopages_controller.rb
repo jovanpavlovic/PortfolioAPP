@@ -63,5 +63,5 @@ class PortfoliopagesController < ApplicationController
                                           technologies_attributes: [:name]
                                           )
 
-  end
+  end 
 end
