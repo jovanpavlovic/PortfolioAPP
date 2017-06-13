@@ -5,11 +5,14 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.all
+    @page_title = "My Blog"#Dynamic title
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @page_title = @blog.title# Dynamic title/show blogs
+    @seo_keywords = @blog.body#keywords tekst bloga
   end
 
   # GET /blogs/new
