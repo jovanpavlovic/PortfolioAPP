@@ -42,7 +42,6 @@ class PortfoliopagesController < ApplicationController
   end
 
   def show
-    binding.pry
   end
                 
    def destroy#ne treba poseban fajl zato sto radi destory
