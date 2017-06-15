@@ -1,4 +1,5 @@
 class PortfoliopagesController < ApplicationController
+  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
   layout 'portfoliopage'
   def index
     @portfolio_items = Portfoliopage.all
@@ -27,11 +28,9 @@ class PortfoliopagesController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Portfoliopage.find(params[:id])#hvata id portfolia//portfolio/4
   end
 
  def update
-    @portfolio_item = Portfoliopage.find(params[:id])
 
     respond_to do |format|
       if @portfolio_item.update(portfoliopage_params)
@@ -43,12 +42,10 @@ class PortfoliopagesController < ApplicationController
   end
 
   def show
-    @portfolio_item = Portfoliopage.find (params[:id])#show za odredjeni portfolio
+    binding.pry
   end
                 
    def destroy#ne treba poseban fajl zato sto radi destory
-    @portfolio_item = Portfoliopage.find(params[:id])#lookup
-
     @portfolio_item.destroy#destroy/delete
     respond_to do |format|
       format.html { redirect_to portfoliopages_url, notice: 'Record was successfully removed.' }
@@ -65,4 +62,7 @@ class PortfoliopagesController < ApplicationController
                                           )
 
   end 
+  def set_portfolio_item
+    @portfolio_item = Portfoliopage.find(params[:id])
+  end
 end
