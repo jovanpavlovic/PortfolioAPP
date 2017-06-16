@@ -15,4 +15,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")#ako user dodje na sajt sa fb, twittera... bice thanks for visiting me from
     end
   end
+
+  def copyright_generator
+    PavlovicViewTool::Renderer.copyright 'Jovan Pavlovic', 'All rights reserved'
+  end
 end
