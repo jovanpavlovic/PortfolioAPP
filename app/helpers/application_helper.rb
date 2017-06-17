@@ -17,6 +17,6 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    PavlovicViewTool::Renderer.copyright 'Jovan Pavlovic', 'All rights reserved'
+    DevcampViewTool::Renderer.copyright 'Jovan Pavlovic', 'All rights reserved'#pavlovic_view_tool gem
   end
 end
