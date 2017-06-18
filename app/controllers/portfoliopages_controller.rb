@@ -1,6 +1,8 @@
 class PortfoliopagesController < ApplicationController
   before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
   layout 'portfoliopage'
+  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all#authorization all user admin
+
   def index
     @portfolio_items = Portfoliopage.all
     #where(subtitle: 'Ruby on Rails')
