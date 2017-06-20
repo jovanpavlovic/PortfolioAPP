@@ -4,7 +4,7 @@ class PortfoliopagesController < ApplicationController
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all#authorization all user admin
 
   def index
-    @portfolio_items = Portfoliopage.all
+    @portfolio_items = Portfoliopage.by_position
     #where(subtitle: 'Ruby on Rails')
   end
 
