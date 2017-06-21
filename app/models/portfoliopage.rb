@@ -10,6 +10,10 @@ class Portfoliopage < ApplicationRecord
     where(subtitle: 'Angular')
   end
 
+  def self.by_position
+    order("position ASC")#ascending pozicija portfolia
+  end
+
   scope :ruby_on_rails_portfolio, -> {where(subtitle: 'Ruby on Rails')}
   #custom scope, 
 
