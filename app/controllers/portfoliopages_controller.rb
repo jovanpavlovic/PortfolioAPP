@@ -8,6 +8,14 @@ class PortfoliopagesController < ApplicationController
     #where(subtitle: 'Ruby on Rails')
   end
 
+  def sort #Sortiranje portfolia
+  params[:order].each do |key, value|
+    Portfoliopage.find(value[:id]).update(position: value[:position])
+  end
+
+  render nothing: true
+  end
+
   def angular
     @angular_portfolio_items = Portfoliopage.angular  
   end

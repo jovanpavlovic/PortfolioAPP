@@ -1,6 +1,5 @@
-
-<div class="card">
-  <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %><!--alternativa unless koju rubi omogucuje, moze se koristiti i if. Pojavljivanje portfolija iako nema sliku-->
+<div class="card" data-id="<%= portfolio_item.id %>"><!--uzima id svakog portfolio itema da bi js mogao da prepozna-->
+  <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
   <p class="card-text">
     <span><%= link_to portfolio_item.title, portfoliopage_show_path(portfolio_item) %></span> <%= portfolio_item.subtitle %>
   </p>
