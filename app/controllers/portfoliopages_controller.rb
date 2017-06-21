@@ -30,7 +30,7 @@ class PortfoliopagesController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfoliopages_path, notice: 'Your portfolio item is now live.' }
+        format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
       else
         format.html { render :new }
       end
@@ -66,7 +66,9 @@ class PortfoliopagesController < ApplicationController
   def portfoliopage_params
     params.require(:portfoliopage).permit(:title, 
                                           :subtitle, 
-                                          :body, 
+                                          :body,
+                                          :main_image,
+                                          :thumb_image, 
                                           technologies_attributes: [:name]
                                           )
 
