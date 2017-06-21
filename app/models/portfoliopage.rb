@@ -6,6 +6,9 @@ class Portfoliopage < ApplicationRecord
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
+  mount_uploader :thumb_image, PortfoliopageUploader#portfolio poziva carriervawe gem
+  mount_uploader :main_image, PortfoliopageUploader
+
   def self.angular
     where(subtitle: 'Angular')
   end
@@ -15,7 +18,7 @@ class Portfoliopage < ApplicationRecord
   end
 
   scope :ruby_on_rails_portfolio, -> {where(subtitle: 'Ruby on Rails')}
-  #custom scope, 
+  #custom scope
 
   after_initialize :set_defaults
 

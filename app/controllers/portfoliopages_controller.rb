@@ -66,7 +66,9 @@ class PortfoliopagesController < ApplicationController
   def portfoliopage_params
     params.require(:portfoliopage).permit(:title, 
                                           :subtitle, 
-                                          :body, 
+                                          :body,
+                                          :main_image,
+                                          :thumb_image, 
                                           technologies_attributes: [:name]
                                           )
 
