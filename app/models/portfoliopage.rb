@@ -1,6 +1,7 @@
 class Portfoliopage < ApplicationRecord
   has_many :technologies
-  accepts_nested_attributes_for :technologies, 
+  accepts_nested_attributes_for :technologies,
+                                allow_destroy: true, 
                                 reject_if: lambda {|attrs| attrs['name'].blank? }#ako je tehnlogija blank-f
 
   validates_presence_of :title, :body

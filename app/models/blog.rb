@@ -4,10 +4,15 @@ class Blog < ApplicationRecord
   friendly_id :title, use: :slugged #generise blog title link
 
   validates_presence_of :title, :body#ne dozvoljava da se napravi blog ako nema title i body
+  Rails.application.config.active_record.belongs_to_required_by_default = true
 
-  belongs_to :topic #vise blogova pripada jednoj topic
+  belongs_to :topic, optional: true #vise blogova pripada jednoj topic#!!!
 
   def self.special_blogs
     all
+  end
+
+  def self.featured_blogs
+    limit(2)
   end
 end

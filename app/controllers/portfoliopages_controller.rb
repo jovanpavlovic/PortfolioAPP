@@ -21,8 +21,7 @@ class PortfoliopagesController < ApplicationController
   end
 
   def new
-    @portfolio_item = Portfoliopage.new
-    3.times { @portfolio_item.technologies.build }
+    @portfolio_item = Portfoliopage.new 
   end
 
   def create
@@ -30,7 +29,7 @@ class PortfoliopagesController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
+        format.html { redirect_to portfoliopages_path, notice: 'Your portfolio item is now live.' }
       else
         format.html { render :new }
       end
@@ -69,10 +68,10 @@ class PortfoliopagesController < ApplicationController
                                           :body,
                                           :main_image,
                                           :thumb_image, 
-                                          technologies_attributes: [:name]
+                                          technologies_attributes: [:id, :name, :_destroy]
                                           )
-
   end 
+
   def set_portfolio_item
     @portfolio_item = Portfoliopage.find(params[:id])
   end
