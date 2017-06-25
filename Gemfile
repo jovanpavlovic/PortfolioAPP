@@ -64,3 +64,4 @@ gem 'mini_magick', '~> 4.7', '>= 4.7.2'
 gem 'carrierwave-aws', '~> 1.1'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.10' #js functions in form
+gem 'gritter', '~> 1.2'
