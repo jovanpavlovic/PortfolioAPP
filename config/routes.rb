@@ -17,5 +17,7 @@
     end
   end  
 
+  mount ActionCable.server => '/cable'
+
   root to: 'pages#home'
 end
