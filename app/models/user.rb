@@ -15,6 +15,8 @@ class User < ApplicationRecord
 
   validates_presence_of :name
 
+  has_many :comments, dependent: :destroy
+
   def first_name
     self.name.split.first#self.name - ime user-a, split uzima string i deli ime u 2 dela first ime, last prezime Hi, John!
   end
