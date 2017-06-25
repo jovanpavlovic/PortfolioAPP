@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
@@ -16,6 +17,7 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
+
            <%= video_tag(
             'Notebook.vid',
              id: 'background',
@@ -23,7 +25,8 @@
              loop: true,
              muted: true,
              poster: 'Notebook1.png'
-            )%>
+            )
+            %>
           
             <%= render "shared/application_nav" %>
             
@@ -34,6 +37,7 @@
             <%= alerts %>
 
             <%= source_helper ("application") %>
+
         </div>
       </div>
     </div>
