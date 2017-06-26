@@ -29,11 +29,21 @@ a:hover {
 html,
 body {
   height: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -219,4 +229,29 @@ body {
 
 .tech-news a {
   color: #2D3F6D;
+}
+
+.app-card-container {
+  color: black;
+  text-align: left;
+}
+
+.app-card-container > .card {
+  padding: 40px;
+}
+
+.profile-img {
+  border: 1px solid grey;
+}
+
+.app-card-container a {
+  color: blue;
+}
+.card-block {
+  margin-top: 5px;
+  margin-bottom: 5px;
+} 
+
+.lead {
+  text-shadow: 1px 1px black;
 }

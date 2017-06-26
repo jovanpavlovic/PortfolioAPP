@@ -52,7 +52,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.3'
-gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'jquery-rails'
 gem 'devcamp_view_tool', '~> 0.1.0'
 gem 'petergate', '~> 1.7', '>= 1.7.5'
@@ -67,3 +67,5 @@ gem 'cocoon', '~> 1.2', '>= 1.2.10' #js functions in form
 gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.1'
 gem 'redis', '~> 3.3', '>= 3.3.3'
+gem 'redcarpet', '~> 3.4'#markdown for blogs
+gem 'coderay', '~> 1.1', '>= 1.1.1'
