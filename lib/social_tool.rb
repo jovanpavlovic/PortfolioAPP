@@ -7,8 +7,13 @@ module SocialTool
       config.access_token_secret = ENV.fetch("TWITTER_ACCESS_SECRET")
     end
 
-    client.search("#rubyonrails", result_type: 'recent').take(6).collect do |tweet|
+    client.search("#rails", result_type: 'recent').take(4).collect do |tweet|
       "#{tweet.user.screen_name}: #{tweet.text}"
     end
+  end
+
+    def self.twitter_post blog_url    
+      @client.update(blog_url)  
+
   end
 end

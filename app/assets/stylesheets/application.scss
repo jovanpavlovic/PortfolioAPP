@@ -210,7 +210,7 @@ h6, .h6 {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('home_bg.png') no-repeat;
+  background: image-url('Notebook1.png') no-repeat;
   background-size: cover;
 }
 
@@ -242,6 +242,8 @@ h6, .h6 {
 
 .profile-img {
   border: 1px solid grey;
+  height: 250px;
+  width: 240px;
 }
 
 .app-card-container a {
@@ -254,4 +256,9 @@ h6, .h6 {
 
 .lead {
   text-shadow: 1px 1px black;
+}
+
+.cover {
+  padding-top: 50px;
+  padding-bottom:50px;
 }

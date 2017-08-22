@@ -45,6 +45,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
+        SocialTool.twitter_post blog_url(@blog)
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
         format.json { render :show, status: :created, location: @blog }
       else

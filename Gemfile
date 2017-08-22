@@ -69,3 +69,4 @@ gem 'twitter', '~> 6.1'
 gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'redcarpet', '~> 3.4'#markdown for blogs
 gem 'coderay', '~> 1.1', '>= 1.1.1'
+gem 'linkedin', '~> 1.1'
