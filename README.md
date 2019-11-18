@@ -7,7 +7,7 @@
 - Real time chat engine for comments
 - Blog
 - Portfolio
-- DRag and drop interface
+- Drag and drop interface
 
 ### Code Example
 
