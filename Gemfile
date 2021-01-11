@@ -67,6 +67,6 @@ gem 'cocoon', '~> 1.2', '>= 1.2.10' #js functions in form
 gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.1'
 gem 'redis', '~> 3.3', '>= 3.3.3'
-gem 'redcarpet', '~> 3.4'#markdown for blogs
+gem 'redcarpet', '~> 3.5'#markdown for blogs
 gem 'coderay', '~> 1.1', '>= 1.1.1'
 gem 'linkedin', '~> 1.1'
